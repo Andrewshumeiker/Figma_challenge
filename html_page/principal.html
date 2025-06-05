@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="./styles_principal.css" />
 </head>
 <body>
+  <!-- Input oculto para controlar el login -->
+  <input type="checkbox" id="login-toggle" class="login-input">
+  
   <header class="header">
     <div class="logo">
       <img src="./images/92ca4389d129c4cb1080d68cc09bb943b5122915.png" alt="Logo" class="logo-img">
@@ -14,9 +17,17 @@
     </div>
     <nav>
       <a href="#">Comprar</a>
-      <a href="#" class="login">Inicia Sesión</a>
+      <label for="login-toggle" class="login">Inicia Sesión</label>
     </nav>
   </header>
+
+  <!-- Vista de login (oculta inicialmente) -->
+  <div class="login-view">
+    <div class="login-container">
+      <label for="login-toggle" class="close-login">×</label>
+      <iframe src="login.html" width="100%" height="500" style="border: none;"></iframe>
+    </div>
+  </div>
 
   <main class="contenido">
     <section class="intro">
